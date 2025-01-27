@@ -9,6 +9,10 @@ import AdOrders from "./pages/admin-view/orders";
 import AdFeatures from "./pages/admin-view/features";
 import ShoLyout from "./component/shopping-view/ShoLayout";
 import NotFound from "./pages/admin-view/not-found";
+import Account from "./pages/shopping-view/Account";
+import Checkout from "./pages/shopping-view/Checkout";
+import Home from "./pages/shopping-view/Home";
+import Listing from "./pages/shopping-view/Listing";
 
 
 const App = () => {
@@ -28,6 +32,11 @@ const App = () => {
         <Route path="features" element={<AdFeatures/>}/>
         </Route>
         <Route  path="/shop" element={<ShoLyout/>} >
+        <Route path="account" element={<Account/>}/>
+        <Route path="checkout" element={<Checkout/>}/>
+        <Route path="home" element={<Home/>}/>
+        <Route path="listing" element={<Listing/>}/>
+        
 
         </Route>
        <Route  >
