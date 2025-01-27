@@ -7,12 +7,14 @@ import AdDashboard from "./pages/admin-view/dashboard";
 import AdProducts from "./pages/admin-view/products";
 import AdOrders from "./pages/admin-view/orders";
 import AdFeatures from "./pages/admin-view/features";
+import ShoLyout from "./component/shopping-view/ShoLayout";
+import NotFound from "./pages/admin-view/not-found";
 
 
 const App = () => {
   return (
     <div className="flex flex-col overflow-hidden bg-white">
-       <h1>Header component</h1>
+      
 
        <Routes>
         <Route path="/auth" element={<Layout/>}>
@@ -25,6 +27,14 @@ const App = () => {
         <Route path="orders" element={<AdOrders/>}/>
         <Route path="features" element={<AdFeatures/>}/>
         </Route>
+        <Route  path="/shop" element={<ShoLyout/>} >
+
+        </Route>
+       <Route  >
+        <Route  path="*" element={<NotFound/>} />
+       </Route>
+
+       
        </Routes>
     </div>
   );
